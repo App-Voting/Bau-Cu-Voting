@@ -7,17 +7,10 @@ function sleep(ms) {
 }
 
 async function main() {
-  const TOKEN = await hre.ethers.getContractFactory('TBPToken')
+  const TOKEN = await hre.ethers.getContractFactory('TokenVoting')
   const token = await TOKEN.deploy()
   await token.deployed()
   console.log('token deployed to:', token.address)
-
-  await sleep(10000);
-
-  await hre.run('verify:verify', {
-    address: token.address,
-    constructorArguments: [],
-  })
 }
 
 main()

@@ -6,10 +6,10 @@ function sleep(ms) {
 
 async function main() {
   // deploy
-  const TBP = await hre.ethers.getContractFactory("PersonGovernanceVoting");
-  const tbp = await TBP.deploy("1690175243", "1695532043", "https://raw.githubusercontent.com/App-Voting/Bau-Cu-Voting/main/blockchain");
-  await tbp.deployed();
-  console.log("tbp deployed to:", tbp.address);
+  const VOTING = await hre.ethers.getContractFactory("PersonGovernanceVoting");
+  const voting = await VOTING.deploy("1690175243", "1695532043", "https://raw.githubusercontent.com/App-Voting/Bau-Cu-Voting/main/blockchain");
+  await voting.deployed();
+  console.log("voting deployed to:", voting.address);
 }
 
 main()

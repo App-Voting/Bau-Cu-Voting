@@ -33,7 +33,7 @@ contract PersonGovernanceVoting is Ownable, InitData {
         _initializeData();
         votingStartTime = startTime_;
         votingEndTime = endTime_;
-        TOKEN_VOTING = IERC20(0x20fe7C3d1b76761E4A9D9ad244443c8985291645);
+        TOKEN_VOTING = IERC20(0x1ecbdA093724Ad7b2b6B151Ad6bA1dA50059DBC5);
     }
 
     modifier _checkDate() {
